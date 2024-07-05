@@ -1,0 +1,15 @@
+streamlit
+pytesseract
+pillow
+transformers
+torch
+datasets
+numpy
+scikit-learn
+spacy
+evaluate
+pathlib
+fitz
+PyMuPDF
+pdf2image
+python-poppler
