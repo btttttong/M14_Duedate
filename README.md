@@ -29,8 +29,8 @@ This project extracts due dates from invoice images using OCR and NER models.
 
 1. **Clone the repository**
     ```sh
-    git clone https://github.com/yourusername/your_project_directory.git
-    cd your_project_directory
+    git clone [https://github.com/yourusername/your_project_directory.git](https://github.com/btttttong/M14_Duedate.git)
+    cd to your_project_directory
     ```
 
 2. **Create and activate a virtual environment**
@@ -44,18 +44,7 @@ This project extracts due dates from invoice images using OCR and NER models.
     pip install -r requirements.txt
     ```
 
-4. **Install Tesseract**
-    - **Ubuntu**:
-        ```sh
-        sudo apt update
-        sudo apt install tesseract-ocr
-        sudo apt install libtesseract-dev
-        ```
-    - **Windows**:
-        - Download the installer from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
-        - Follow the installation instructions.
-
-5. **Download and place your trained model in the `model` directory**:
+4. **Check trained model in the `model` directory**:
     - The model should be saved in the directory `./model/ner_model`.
 
 ## Usage
