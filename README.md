@@ -42,18 +42,7 @@ for model using google-bert/bert-base-multilingual-cased model with "gretelai/sy
     pip install -r requirements.txt
     ```
 
-4. **Install Tesseract**
-    - **Ubuntu**:
-        ```sh
-        sudo apt update
-        sudo apt install tesseract-ocr
-        sudo apt install libtesseract-dev
-        ```
-    - **Windows**:
-        - Download the installer from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
-        - Follow the installation instructions.
-
-5. **Download and place your trained model in the `model` directory**:
+4. **Check trained model in the `model` directory**:
     - The model should be saved in the directory `./model/ner_model`.
 
 
