@@ -1,18 +1,16 @@
 # Invoice Due Date Extractor
 
-This project extracts due dates from invoice images using OCR and NER models.
+This project  aim to extracts due dates from invoice images using OCR and NER models.
+for model using google-bert/bert-base-multilingual-cased model with "gretelai/synthetic_pii_finance_multilingual as pre-train set.
 
-## Project Structure
-
-/project_directory
-    /data
-    # Place your data files here
-    /model
-        model.py
-        train.py
-    main.py
-    README.md
-    requirements.txt
+## Directory Structure
+- `/data`: Contains sample invoice images and PDFs used for the project.
+- `/model`: Scripts and files needed for launching the model.
+- `/docs`: Project report and system design document.
+- `/utils`: Utility scripts for text extraction and other helper functions.
+- `main.py`: Main Python file for the Streamlit app.
+- `README.md`: Project overview and instructions.
+- `requirements.txt`: List of required Python packages.
 
 ## Requirements
 
@@ -22,14 +20,14 @@ This project extracts due dates from invoice images using OCR and NER models.
 - pillow
 - transformers
 - torch
-- datasets
+- datasetsS
 - scikit-learn
 
 ## Installation
 
 1. **Clone the repository**
     ```sh
-    git clone https://github.com/yourusername/your_project_directory.git
+    git clone https://github.com/btttttong/M14_Duedate.git
     cd your_project_directory
     ```
 
@@ -58,6 +56,8 @@ This project extracts due dates from invoice images using OCR and NER models.
 5. **Download and place your trained model in the `model` directory**:
     - The model should be saved in the directory `./model/ner_model`.
 
+
+
 ## Usage
 
 1. **Train the Model** (If you need to train a new model):
@@ -77,20 +77,3 @@ This project extracts due dates from invoice images using OCR and NER models.
     - Use the file uploader in the app to upload an image of an invoice.
     - The app will display the OCR text and extract due dates using the NER model.
 
-## Project Files
-
-### `model/model.py`
-
-This file contains functions to load and save the NER model.
-
-```python
-from transformers import AutoTokenizer, AutoModelForTokenClassification
-
-def load_ner_model(model_path):
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model = AutoModelForTokenClassification.from_pretrained(model_path)
-    return pipeline(model=model, tokenizer=tokenizer, aggregation_strategy="simple", task='ner')
-
-def save_ner_model(model, tokenizer, model_path):
-    model.save_pretrained(model_path)
-    tokenizer.save_pretrained(model_path)
